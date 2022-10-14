@@ -1,24 +1,37 @@
 - addMavenRepository: https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore
-#- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@snapshots"
 
-# New next.js and industrial modules
+# modules
 - installBundle:
     - "mvn:org.jahia.modules/animate/1.8.2"
     - "mvn:org.jahia.modules/font-awesome"
-    - "mvn:org.jahia.modules/bootstrap4-package"
-    - "mvn:org.jahia.modules/forms-package"
+#    BS4 package
+    - "mvn:org.jahia.modules/popperjs"
+    - "mvn:org.jahia.modules/bootstrap4-core"
+    - "mvn:org.jahia.modules/bootstrap4-components"
+#   Forms
+    - "mvn:org.jahia.modules/forms-core"
+    - "mvn:org.jahia.modules/forms-prefill"
     - "mvn:org.jahia.se.modules/industrial-form-theme/1.0.0"
-    - "mvn:org.jahia.modules/augmented-search-package"
-    - "mvn:org.jahia.se.modules/codemirror-editor/1.1.3"
-    - "mvn:org.jahia.modules/consent-manager"
+#    Augmented Search package
+    - "mvn:org.jahia.modules/augmented-search"
+    - "mvn:org.jahia.modules/augmented-search-ui"
+    - "mvn:org.jahia.modules/database-connector"
+    - "mvn:org.jahia.modules/elasticsearch-connector"
+    - "mvn:org.jahia.modules/graphql-dxm-provider"
+#   jExperience
     - "mvn:org.jahia.modules/jexperience"
     - "mvn:org.jahia.modules/jexperience-forms-bridge"
 #    - "mvn:org.jahia.modules/jexperience-dashboards"
+#   Quiz
     - "mvn:org.jahia.se.modules/game-4-jcustomer-core/1.1.4"
     - "mvn:org.jahia.se.modules/game-4-jcustomer-components-quiz/1.1.4"
-    - "mvn:org.jahia.se.modules/widen-picker/2.4.0"
+#   Nextjs industrial
+#    - "mvn:org.jahia.se.modules/jahia-industrial"
+#    - "mvn:org.jahia.se.modules/industrial-media-component/1.0.0"
 #    - "mvn:org.jahia.modules/nextjs-proxy"
+#   Misc
+    - "mvn:org.jahia.se.modules/codemirror-editor/1.1.3"
+    - "mvn:org.jahia.se.modules/consent-manager"
+    - "mvn:org.jahia.se.modules/widen-picker/2.4.0"
   autoStart: true
   uninstallPreviousVersion: true
-#- importSite: jar:https://github.com/Jahia/provisioning-drive/raw/main/drive-webproject.zip!/motor-retail.zip
-#- import: jar:https://raw.githubusercontent.com/Jahia/jahia-nextjs-initiative/main/docker-jahia/headless-industrial.zip!/users.zip
